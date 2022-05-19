@@ -1,25 +1,18 @@
-import style from "./style.module.scss"
+import style from "./style.module.scss";
 
-import { FaUserAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { AiFillEye } from "react-icons/ai";
 
-import WelcomeImg from "../../assets/welcomeHome.svg";
 import DotAreasMinor from "../../assets/dotAreaMinor.svg";
-import { Link } from "react-router-dom";
+import DotAreas from "../../assets/dotAreas.svg";
+import TrainerImg from "../../assets/trainer.svg";
 
-export function Register() {
+export function Login() {
     return (
         <div className={style.registerContainer}>
-            <h1 className={style.typography}>Cadastre-se agora</h1>
+            <h1 className={style.typography}>Bem-vindo(a)</h1>
+            <h2 className={style.typographySub}>Isso nos ajudará a saber mais sobre você</h2>
             <form action="" className={style.formContainer}>
-                <div className={style.inputContainer}>
-                    <label htmlFor=""></label>
-                    <input type="text" placeholder="Nome"/>
-                    <i>
-                        <FaUserAlt />
-                    </i>
-                </div>
                 <div className={style.inputContainer}>
                     <label htmlFor=""></label>
                     <input type="email" placeholder="E-mail"/>
@@ -34,15 +27,12 @@ export function Register() {
                         <AiFillEye />
                     </i>
                 </div>
-                <Link to="/register-conclusion">
-                    <button type="submit" className={style.buttonRegister}>Cadastrar-se</button>
-                </Link>
-                <Link to="/login">
-                    <p className={style.linkToLogin}>Já possui uma conta? <b>Entrar</b></p>
-                </Link>
+                <button type="submit" className={style.buttonRegister}>Entrar</button>
+                <a href="#" className={style.linkToLogin}>Aina não possui uma conta? <b>Cadastre-se agora</b></a>
             </form>
             <img src={DotAreasMinor} alt="foto de área com pontos" className={style.dotAreasMinor}/>
-            <img src={WelcomeImg} alt="foto de área com pontos" className={style.welcomeImage}/>
+            <img src={DotAreas} alt="foto de aŕeas com pontos" className={style.dotAreas} />
+            <img src={TrainerImg} alt="foto de área com pontos" className={style.welcomeImage}/>
             <div className={style.lateralBar}></div>
         </div>
     )

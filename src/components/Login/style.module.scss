@@ -1,0 +1,152 @@
+.registerContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    background-color: #ffffff;
+
+    .typography {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.4rem;
+        line-height: 44px;
+        margin-bottom: 2rem;
+        color: #1A3447;
+    }
+
+    .typographySub {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 2em;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #7B6F72;
+
+    }
+
+    .welcomeImage {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        width: 15rem;
+        height: 15rem;
+        z-index: 9999;
+    }
+
+    .dotAreas {
+        position: absolute;
+        top: 6rem;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .dotAreasMinor {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .lateralBar {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10rem;
+        height: 35rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color:#7492FF;
+    }
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 70rem;
+    width: 100%;
+
+    .inputContainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30rem;
+        margin-bottom: 1.5rem;
+
+        input {
+            top: 0;
+            left: 0;
+            font-family: 'Inter', sans-serif;
+            background: #F7F8F8;
+            border: 1px solid #B0B0B0;
+            border-radius: 5px;
+            padding: 0.8rem;
+            width: 30rem;
+        }
+
+        i {
+            position: absolute;
+            top: 12px;
+            right: 10px;
+            font-size: 1.2rem;
+            color: #B0B0B0;
+        }
+
+        .inputInform {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(0%);
+            z-index: 9999;
+            width: 3rem;
+            height: 2.8rem;
+            border-radius: 5px;
+            background: linear-gradient(274.42deg, #C58BF2 0%, #EEA4CE 124.45%);
+
+            span {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-size: 20px;
+                line-height: 18px;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
+
+.buttonRegister {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    background: #98BEE1;
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+    box-shadow: 0px 10px 22px rgba(149, 173, 254, 0.3);
+    padding: 0.6rem 2rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 50px;
+    width: 30rem;
+}
+
+.linkToLogin {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4em;
+    line-height: 22px;
+    text-decoration: none;
+    margin-top: 2em;
+    color: #464646;
+}

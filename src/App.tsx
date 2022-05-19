@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "./components/Home";
+import { Login } from "./components/Login";
 import { Register } from "./components/Register";
 import { RegisterComplete } from "./components/RegisterComplete";
 
@@ -11,6 +12,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/register-conclusion" element={<RegisterComplete />}/>
+        <Route path="/login" element={<Login />}/>
       </Routes>
   );
 }
