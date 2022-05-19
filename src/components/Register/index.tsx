@@ -6,6 +6,7 @@ import { AiFillEye } from "react-icons/ai";
 
 import WelcomeImg from "../../assets/welcomeHome.svg";
 import DotAreasMinor from "../../assets/dotAreaMinor.svg";
+import { Link } from "react-router-dom";
 
 export function Register() {
     return (
@@ -33,7 +34,9 @@ export function Register() {
                         <AiFillEye />
                     </i>
                 </div>
-                <button type="submit" className={style.buttonRegister}>Cadastrar-se</button>
+                <Link to="/register-conclusion">
+                    <button type="submit" className={style.buttonRegister}>Cadastrar-se</button>
+                </Link>
                 <a href="#" className={style.linkToLogin}>Já possui uma conta? <b>Entrar</b></a>
             </form>
             <img src={DotAreasMinor} alt="foto de área com pontos" className={style.dotAreasMinor}/>
