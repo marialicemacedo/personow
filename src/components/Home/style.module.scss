@@ -1,0 +1,76 @@
+.homeContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+    .welcomeMessage {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        text-align: center;
+        color: #1D1617;
+    }
+
+    img {
+        margin: 2rem 0;
+    }
+
+    .dotAreas {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .dotAreasMinor {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .lateralBar {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10rem;
+        height: 40rem;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color:#7492FF;
+    }
+}
+
+.optionsToNavigate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    button {
+        max-width: 25rem;
+        width: 100%;
+
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+
+        padding: 1rem 2.6rem;
+        border: none;
+        border-radius: 50px;
+        background-color: #95ACFE;
+
+        &:nth-child(2) {
+            margin-top: 3rem;
+        }
+    }
+}
