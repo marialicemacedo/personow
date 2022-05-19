@@ -3,6 +3,7 @@ import style from "./style.module.scss";
 import WelcomeImg from "../../assets/welcomeHome.svg";
 import DotAreas from "../../assets/dotAreas.svg";
 import DotAreasMinor from "../../assets/dotAreaMinor.svg";
+import { Link } from "react-router-dom";
 
 
 export function Home() {
@@ -11,7 +12,9 @@ export function Home() {
             <h2 className={style.welcomeMessage}>Bem-vindo(a) ao PersoNOW</h2>
             <img src={WelcomeImg} alt="imagem de boas-vindas" />
             <div className={style.optionsToNavigate}>
-                <button type="button">Quero encontrar um personal</button>
+                <Link to="/register">
+                    <button type="button">Quero encontrar um personal</button>
+                </Link>
                 <button type="button">Sou um personal</button>
             </div>
             <img src={DotAreas} alt="foto de área com pontos" className={style.dotAreas}/>
