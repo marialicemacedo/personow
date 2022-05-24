@@ -7,34 +7,45 @@ import { AiFillEye } from "react-icons/ai";
 import WelcomeImg from "../../assets/welcomeHome.svg";
 import DotAreasMinor from "../../assets/dotAreaMinor.svg";
 import { Link } from "react-router-dom";
+import {useState, useEffect} from "react";
+import { getSystemErrorName } from "util";
+import axios from "axios";
+import cli from "../auxiliar/infocli";
+
+
 
 export function Register() {
+
+    const [nome,setNome] = useState("")
+    const [email,setEmail] = useState("")
+    const [senha,setSenha] = useState("")
+
     return (
         <div className={style.registerContainer}>
             <h1 className={style.typography}>Cadastre-se agora</h1>
             <form action="" className={style.formContainer}>
                 <div className={style.inputContainer}>
                     <label htmlFor=""></label>
-                    <input type="text" placeholder="Nome"/>
+                    <input type="text" placeholder="Nome" value={(nome==null || nome===undefined)?"":nome} name="name"  onChange={(event)=>{setNome(event.target.value)}}/>
                     <i>
                         <FaUserAlt />
                     </i>
                 </div>
                 <div className={style.inputContainer}>
                     <label htmlFor=""></label>
-                    <input type="email" placeholder="E-mail"/>
+                    <input type="email" placeholder="E-mail" value={(email==null || email===undefined)?"":email} name="email"  onChange={(event)=>{setEmail(event.target.value)}}/>
                     <i>
                         <MdEmail />
                     </i>
                 </div>
                 <div className={style.inputContainer}>
                     <label htmlFor=""></label>
-                    <input type="password" placeholder="Senha"/>
+                    <input type="password" placeholder="Senha" value={(senha==null || senha===undefined)?"":senha} name="senha"  onChange={(event)=>{setSenha(event.target.value)}}/>
                     <i>
                         <AiFillEye />
                     </i>
                 </div>
-                <Link to="/register-conclusion">
+                <Link to={"/register-conclusion?nome="+nome+"&email="+email+"&senha="+senha}>
                     <button type="submit" className={style.buttonRegister}>Cadastrar-se</button>
                 </Link>
                 <Link to="/login">
@@ -47,3 +58,4 @@ export function Register() {
         </div>
     )
 }
+
