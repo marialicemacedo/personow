@@ -9,14 +9,13 @@ import DotAreasMinor from "../../assets/dotAreaMinor.svg";
 import { Link } from "react-router-dom";
 import {useState, useEffect} from "react";
 import { getSystemErrorName } from "util";
-import axios from "axios";
-import cli from "../auxiliar/infocli";
 
 
 
 export function Register() {
 
     const [nome,setNome] = useState("")
+    const [cpf,setCpf] = useState("")
     const [email,setEmail] = useState("")
     const [senha,setSenha] = useState("")
 
@@ -27,6 +26,13 @@ export function Register() {
                 <div className={style.inputContainer}>
                     <label htmlFor=""></label>
                     <input type="text" placeholder="Nome" value={(nome==null || nome===undefined)?"":nome} name="name"  onChange={(event)=>{setNome(event.target.value)}}/>
+                    <i>
+                        <FaUserAlt />
+                    </i>
+                </div>
+                <div className={style.inputContainer}>
+                    <label htmlFor=""></label>
+                    <input type="text" placeholder="CPF" value={(cpf==null || cpf===undefined)?"":cpf} name="name"  onChange={(event)=>{setCpf(event.target.value)}}/>
                     <i>
                         <FaUserAlt />
                     </i>
@@ -45,7 +51,7 @@ export function Register() {
                         <AiFillEye />
                     </i>
                 </div>
-                <Link to={"/register-conclusion?nome="+nome+"&email="+email+"&senha="+senha}>
+                <Link to={"/register-conclusion?nome="+nome+"&cpf="+cpf+"&email="+email+"&senha="+senha}>
                     <button type="submit" className={style.buttonRegister}>Cadastrar-se</button>
                 </Link>
                 <Link to="/login">

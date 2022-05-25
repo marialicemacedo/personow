@@ -14,6 +14,7 @@ export function RegisterComplete() {
 
     const urlParams = new URLSearchParams(window.location.search);
     const nome = urlParams.get('nome');
+    const cpf = urlParams.get('cpf');
     const email = urlParams.get('email');
     const senha = urlParams.get('senha');
 
@@ -27,6 +28,8 @@ export function RegisterComplete() {
         event.preventDefault();
         const body = {
             function: "cadastrar",
+            nome: nome,
+            cpf: cpf,
             email: email,
             senha: senha,
             genero: genero,
@@ -34,6 +37,7 @@ export function RegisterComplete() {
             peso: peso,
             altura: altura
         }
+
         axios.post('http://localhost/persoNOW-V0/controller/controle-cliente.php', body 
         )
             .then(response => {
